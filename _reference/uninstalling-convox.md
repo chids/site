@@ -10,7 +10,7 @@ At any time you can easily remove all the AWS resources Convox uses for your Ser
 
 Uninstall will take approximately 15 minutes to complete.
 
-You can uninstall a Rack by running `convox rack uninstall <provider> <stack-name>`.
+You can uninstall a Rack by running `convox rack uninstall <provider> <stack-name>`. This command will delegate the actual deletion of Convox to Cloudformation through the AWS CLI and thus use the **default credentials** specified in `~/.aws/credentials` and expect the Rack to be in the region specified in `~/.aws/config`.
 
 <div class="block-callout block-show-callout type-info" markdown="1">
 `provider` will be one of `local` or `aws`.
